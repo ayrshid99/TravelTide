@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+<header class="bg-blue-500 py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <div>
+            <h1 class="text-white text-3xl font-bold">Travel Tide</h1>
+            <p class="text-white text-sm">Explore  Kashmir with Us</p>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div>
+                <p class="text-white">Email: example@example.com</p>
+                <p class="text-white">Phone: +1234567890</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+<script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+<div class="relative w-full flex flex-shrink-0 overflow-hidden shadow-2xl">
+    <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
+        <span id="currentIndex">1</span>/
+        <span id="totalImages">5</span>
+    </div>
+
+    <div id="slider" class="w-full">
+        <figure class="h-96">
+            <img id="image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
+            <figure class="h-96 relative">
+                <img id="image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
+                <figcaption id="quote" class="absolute inset-x-0 bottom-1 z-20 w-96 mx-auto p-4 font-light text-lg text-center bg-sky-500 bg-opacity-75 rounded">
+                    <a href="#contact" class="text-white hover:underline">Contact Us For Bookings</a>
+                </figcaption>
+
+            </figure>
+
+        </figure>
+    </div>
+
+    <button onclick="back()" class="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <!-- Left arrow SVG -->
+    </button>
+
+    <button onclick="next()" class="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <!-- Right arrow SVG -->
+    </button>
+</div>
+
+
+<script>
+    let currentIndex = 0;
+    const images = [
+        {
+            url: 'https://source.unsplash.com/1600x900/?kashmir,mountains',
+            alt: 'Kashmir Mountains',
+            quote: '“The gladdest moment in human life, me thinks, is a departure into unknown lands.” - Sir Richard Burton'
+        },
+        {
+            url: 'https://source.unsplash.com/1600x900/?kashmir,lake',
+            alt: 'Kashmir Lake',
+            quote: '“Travel makes one modest. You see what a tiny place you occupy in the world.” - Gustave Flaubert'
+        },
+        {
+            url: 'https://source.unsplash.com/1600x900/?kashmir,valley',
+            alt: 'Kashmir Valley',
+            quote: '“To travel is to take a journey into yourself.” - Danny Kaye'
+        },
+        {
+            url: 'https://source.unsplash.com/1600x900/?kashmir,city',
+            alt: 'Kashmir City',
+            quote: '“A journey is best measured in friends, rather than miles.” - Tim Cahill'
+        },
+        {
+            url: 'https://source.unsplash.com/1600x900/?kashmir,people',
+            alt: 'Kashmir People',
+            quote: '“The world is a book, and those who do not travel read only a page.” - Saint Augustine'
+        }
+        // Add more images with quotes
+    ];
+    const totalImages = images.length;
+
+    function showSlide() {
+        const currentImage = images[currentIndex];
+        document.getElementById('image').src = currentImage.url;
+        document.getElementById('image').alt = currentImage.alt;
+        document.getElementById('currentIndex').innerText = currentIndex + 1;
+        document.getElementById('totalImages').innerText = totalImages;
+    }
+
+    function next() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showSlide();
+    }
+
+    function back() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        showSlide();
+    }
+
+    showSlide();
+
+    // Auto slide after 5 seconds
+    setInterval(() => {
+        next();
+    }, 5000);
+</script>
+
+
+
+
+<!-- Booking Sections -->
+<section class="bg-gray-100 py-12">
+    <div class="container mx-auto flex flex-wrap justify-around items-start">
+        <div class="w-full sm:w-1/2 p-4">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Hotel Booking</h2>
+                <div class="text-center mb-6">
+                    <img src="https://source.unsplash.com/400x300/?hotel" alt="Hotel" class="mx-auto rounded-lg shadow-md">
+                </div>
+                <p class="mb-6 text-center">Explore our wide range of hotels available in Kashmir. Contact us for booking!</p>
+                <!-- Your contact information -->
+                <div class="text-center">
+                    <p class="text-sm">For bookings and inquiries, please contact us at:</p>
+                    <p class="text-lg font-bold mb-2">example@email.com</p>
+                    <p class="text-sm">Or call us at: +1 123 456 7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="w-full sm:w-1/2 p-4">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Car Booking</h2>
+                <div class="text-center mb-6">
+                    <img src="https://source.unsplash.com/400x300/?car" alt="Car" class="mx-auto rounded-lg shadow-md">
+                </div>
+                <p class="mb-6 text-center">Book your perfect ride for an amazing trip. Contact us to rent a car!</p>
+                <!-- Your contact information -->
+                <div class="text-center">
+                    <p class="text-sm">For car rental and inquiries, please contact us at:</p>
+                    <p class="text-lg font-bold mb-2">carrental@example.com</p>
+                    <p class="text-sm">Or call us at: +1 987 654 3210</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="bg-gray-200 py-12 text-center" id="contact">
+    <div class="container mx-auto max-w-2xl">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="mb-4">For any inquiries or assistance, feel free to reach out to us:</p>
+        <div class="mb-4">
+            <p class="text-lg font-semibold">Email: example@email.com</p>
+            <p class="text-lg font-semibold">Phone: +1 123 456 7890</p>
+        </div>
+        <p class="mb-4">For instant assistance, you can also chat with us on WhatsApp:</p>
+        <a href="https://wa.me/1234567890" class="bg-green-500 text-white font-semibold py-2 px-4 rounded inline-block">Chat on WhatsApp</a>
+    </div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-12 bg-gray-100">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-center">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-center mb-4">
+                    <img src="https://via.placeholder.com/150" alt="User" class="rounded-full mx-auto mb-3">
+                    <p class="text-lg font-semibold">John Doe</p>
+                    <p class="text-sm">Kashmir Visitor</p>
+                </div>
+                <p class="text-gray-700">"My trip to Kashmir was unforgettable! The beauty of the landscapes left me speechless. I highly recommend Travel Tide for an incredible experience!"</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-center mb-4">
+                    <img src="https://via.placeholder.com/150" alt="User" class="rounded-full mx-auto mb-3">
+                    <p class="text-lg font-semibold">Jane Smith</p>
+                    <p class="text-sm">Happy Traveler</p>
+                </div>
+                <p class="text-gray-700">"Travel Tide provided an exceptional service! The tour guides were knowledgeable, and every detail was well taken care of. Highly recommended!"</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-center mb-4">
+                    <img src="https://via.placeholder.com/150" alt="User" class="rounded-full mx-auto mb-3">
+                    <p class="text-lg font-semibold">Samuel Brown</p>
+                    <p class="text-sm">Adventurer</p>
+                </div>
+                <p class="text-gray-700">"I had an amazing experience in Kashmir! The team at Travel Tide ensured a smooth and wonderful journey. Will definitely book again!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-center">Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- First Row -->
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,mountains" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,lake" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,valley" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <!-- Second Row -->
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,city" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,people" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/1600x900/?kashmir,temple" alt="Kashmir" class="rounded-lg shadow">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+</section>
+
+
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('slider', () => ({
+            currentIndex: 1,
+            images: [
+                'https://source.unsplash.com/1600x900/?beach',
+                'https://source.unsplash.com/1600x900/?cat',
+                'https://source.unsplash.com/1600x900/?dog',
+                'https://source.unsplash.com/1600x900/?lego',
+                'https://source.unsplash.com/1600x900/?textures&patterns'
+            ],
+            back() {
+                if (this.currentIndex > 1) {
+                    this.currentIndex = this.currentIndex - 1;
+                }
+            },
+            next() {
+                if (this.currentIndex < this.images.length) {
+                    this.currentIndex = this.currentIndex + 1;
+                } else if (this.currentIndex <= this.images.length){
+                    this.currentIndex = this.images.length - this.currentIndex + 1
+                }
+            },
+        }))
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>
