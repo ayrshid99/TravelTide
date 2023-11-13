@@ -3,10 +3,10 @@
 <head>
     <title>Travel Tide Explore Kashmir</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'>
-    <meta http-equiv='expires' content='0'>
-    <meta http-equiv='pragma' content='no-cache'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content='no-cache' http-equiv='cache-control'>
+    <meta content='0' http-equiv='expires'>
+    <meta content='no-cache' http-equiv='pragma'>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body style="padding-left: 30px;padding-right: 30px;">
@@ -21,15 +21,12 @@
             <div>
                 <p class="text-white">Email: traveldesk@traveltide.in</p>
                 <p class="text-white">Phone: +91-9541445155, +91-8899005557</p>
+
+
             </div>
         </div>
     </div>
 </header>
-
-
-
-
-
 
 
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
@@ -39,13 +36,14 @@
         <span id="totalImages">5</span>
     </div>
 
-    <div id="slider" class="w-full">
+    <div class="w-full" id="slider">
         <figure class="h-96">
-            <img id="image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
+            <img class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" id="image"/>
             <figure class="h-96 relative">
-                <img id="image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
-                <figcaption id="quote" class="absolute inset-x-0 bottom-1 z-20 w-96 mx-auto p-4 font-light text-lg text-center bg-sky-500 bg-opacity-75 rounded">
-                    <a href="#contact" class="text-white hover:underline">Contact Us For Bookings</a>
+                <img class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" id="image"/>
+                <figcaption class="absolute inset-x-0 bottom-1 z-20 w-96 mx-auto p-4 font-light text-lg text-center bg-sky-500 bg-opacity-75 rounded"
+                            id="quote">
+                    <a class="text-white hover:underline" href="#contact">Contact Us For Bookings</a>
                 </figcaption>
 
             </figure>
@@ -53,11 +51,13 @@
         </figure>
     </div>
 
-    <button onclick="back()" class="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+    <button class="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200"
+            onclick="back()">
         <!-- Left arrow SVG -->
     </button>
 
-    <button onclick="next()" class="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+    <button class="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200"
+            onclick="next()">
         <!-- Right arrow SVG -->
     </button>
 </div>
@@ -127,32 +127,39 @@
         <div class="flex flex-col md:flex-row justify-center items-stretch space-y-4 md:space-y-0">
             <div class="md:w-1/3">
                 <div class="bg-gray-200 p-4 rounded-lg h-full">
-                    <img src="vision.jpg" alt="Kashmir Image 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img alt="Kashmir Image 1" class="w-full h-48 object-cover rounded-lg mb-4" src="vision.jpg">
                     <h3 class="text-lg font-bold mb-2">Our Vision</h3>
-                    <p class="text-sm">At TravelTide, our vision is to inspire and empower people to explore Kashmir in a meaningful way. We believe that travel has the power to broaden minds, foster cultural exchange, and create lifelong memories. We want to help our clients experience the world in all its beauty and diversity.</p>
+                    <p class="text-sm">At TravelTide, our vision is to inspire and empower people to explore Kashmir in
+                        a meaningful way. We believe that travel has the power to broaden minds, foster cultural
+                        exchange, and create lifelong memories. We want to help our clients experience the world in all
+                        its beauty and diversity.</p>
                 </div>
             </div>
             <div class="md:w-1/3 mx-4"> <!-- Adding margin on left and right -->
                 <div class="bg-gray-200 p-4 rounded-lg h-full">
-                    <img src="expertise.jpg" alt="Kashmir Image 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img alt="Kashmir Image 2" class="w-full h-48 object-cover rounded-lg mb-4" src="expertise.jpg">
                     <h3 class="text-lg font-bold mb-2">Our Expertise</h3>
-                    <p class="text-sm">Our team of travel experts has decades of combined experience in the industry. We're passionate about travel and we're dedicated to providing our clients with the best possible service. We have a deep knowledge of destinations around the world and we're always on the lookout for new and exciting travel opportunities.</p>
+                    <p class="text-sm">Our team of travel experts has decades of combined experience in the industry.
+                        We're passionate about travel and we're dedicated to providing our clients with the best
+                        possible service. We have a deep knowledge of destinations around the world and we're always on
+                        the lookout for new and exciting travel opportunities.</p>
                 </div>
             </div>
             <div class="md:w-1/3">
                 <div class="bg-gray-200 p-4 rounded-lg h-full">
-                    <img src="ourservices1.jpg" alt="Kashmir Image 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img alt="Kashmir Image 3" class="w-full h-48 object-cover rounded-lg mb-4" src="ourservices1.jpg">
                     <h3 class="text-lg font-bold mb-2">Our Services</h3>
-                    <p class="text-sm">We offer a wide range of travel services, including luxury travel, adventure travel, group tours, customized itineraries, cab booking, Kashmir tour packages , Europe and Russia immigration. We work closely with our clients to create personalized travel experiences that cater to their unique needs and interests. We handle all the details so our clients can relax and enjoy their travels.</p>
+                    <p class="text-sm">We offer a wide range of travel services, including luxury travel, adventure
+                        travel, group tours, customized itineraries, cab booking, Kashmir tour packages , Europe and
+                        Russia immigration. We work closely with our clients to create personalized travel experiences
+                        that cater to their unique needs and interests. We handle all the details so our clients can
+                        relax and enjoy their travels.</p>
                 </div>
             </div>
         </div>
     </div>
 
 </section>
-
-
-
 
 
 <!-- Booking Sections -->
@@ -162,16 +169,19 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h2 class="text-2xl font-bold mb-4">Hotel Booking</h2>
                 <div class="text-center mb-6">
-                    <img src="https://source.unsplash.com/400x300/?hotel" alt="Hotel" class="mx-auto rounded-lg shadow-md">
+                    <img alt="Hotel" class="mx-auto rounded-lg shadow-md"
+                         src="https://source.unsplash.com/400x300/?hotel">
                 </div>
-                <p class="mb-6 text-center">Explore our wide range of hotels available in Kashmir. Contact us for booking!</p>
+                <p class="mb-6 text-center">Explore our wide range of hotels available in Kashmir. Contact us for
+                    booking!</p>
                 <!-- Your contact information -->
                 <div class="text-center">
                     <p class="text-sm">For bookings and inquiries, please contact us at:</p>
                     <p class="text-lg font-bold mb-2">traveldesk@traveltide.in
-</p>
+                    </p>
                     <p class="text-sm">Or call us at: +91-9541445155 ,+91-8899005557
-</p>
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -179,14 +189,14 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <h2 class="text-2xl font-bold mb-4">Car Booking</h2>
                 <div class="text-center mb-6">
-                    <img src="https://source.unsplash.com/400x300/?car" alt="Car" class="mx-auto rounded-lg shadow-md">
+                    <img alt="Car" class="mx-auto rounded-lg shadow-md" src="https://source.unsplash.com/400x300/?car">
                 </div>
                 <p class="mb-6 text-center">Book your perfect ride for an amazing trip. Contact us to rent a car!</p>
                 <!-- Your contact information -->
                 <div class="text-center">
                     <p class="text-sm">For car rental and inquiries, please contact us at:</p>
                     <p class="text-lg font-bold mb-2">traveldesk@traveltide.in</p>
-                    <p class="text-sm">Or call us at:  +91-9541445155 ,+91-8899005557</p>
+                    <p class="text-sm">Or call us at: +91-9541445155 ,+91-8899005557</p>
                 </div>
             </div>
         </div>
@@ -200,13 +210,15 @@
         <p class="mb-4">For any inquiries or assistance, feel free to reach out to us:</p>
         <div class="mb-4">
             <p class="text-lg font-semibold">Email: traveldesk@traveltide.in
-</p>
+            </p>
             <p class="text-lg font-semibold">Phone: +91-9541445155 ,+91-8899005557
-</p>
+            </p>
         </div>
         <p class="mb-4">For instant assistance, you can also chat with us on WhatsApp:</p>
-        <a href="https://wa.me/9541445155
-" class="bg-green-500 text-white font-semibold py-2 px-4 rounded inline-block">Chat on WhatsApp</a>
+        <a class="bg-green-500 text-white font-semibold py-2 px-4 rounded inline-block" href="https://wa.me/9541445155
+">Chat on WhatsApp</a>
+        <a class="bg-green-500 text-white font-semibold py-2 px-4 rounded inline-block ml-1.5" href="https://wa.me/8899005557
+">Chat on WhatsApp</a>
     </div>
 </section>
 <!-- Testimonials Section -->
@@ -249,23 +261,23 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- First Row -->
             <div>
-                <img src="g1.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g1.jpg">
             </div>
             <div>
-                <img src="g2.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g2.jpg">
             </div>
             <div>
-                <img src="g3.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g3.jpg">
             </div>
             <!-- Second Row -->
             <div>
-                <img src="g4.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g4.jpg">
             </div>
             <div>
-                <img src="g5.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g5.jpg">
             </div>
             <div>
-                <img src="g6.jpg" alt="Kashmir" class="rounded-lg shadow">
+                <img alt="Kashmir" class="rounded-lg shadow" src="g6.jpg">
             </div>
             <!-- Add more images as needed -->
         </div>
@@ -274,24 +286,25 @@
 <section class="py-12 bg-white">
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div class="lg:w-1/2 lg:pr-8">
-            <img src="immigrations.jpg" alt="Immigration to Europe" class="w-full h-auto rounded-lg shadow-lg">
+            <img alt="Immigration to Europe" class="w-full h-auto rounded-lg shadow-lg" src="immigrations.jpg">
         </div>
         <div class="lg:w-1/2 lg:pl-8">
             <div class="text-center lg:text-left">
                 <h2 class="text-4xl lg:text-3xl font-bold mb-4 text-gray-900">Immigrate to Europe and Russia</h2>
-                <p class="text-lg lg:text-xl mb-6 text-gray-700 leading-relaxed">Explore opportunities and simplify your immigration process to Europe with TravelTide.</p>
-                <p class="text-base lg:text-lg mb-6 text-gray-700 leading-relaxed font-semibold">For personalized assistance and guidance:</p>
+                <p class="text-lg lg:text-xl mb-6 text-gray-700 leading-relaxed">Explore opportunities and simplify your
+                    immigration process to Europe with TravelTide.</p>
+                <p class="text-base lg:text-lg mb-6 text-gray-700 leading-relaxed font-semibold">For personalized
+                    assistance and guidance:</p>
                 <ul class="text-base lg:text-lg mb-6 text-gray-700">
-                    <li>Email: <a href="mailto:traveldesk@traveltide.in" class="underline">traveldesk@traveltide.in</a></li>
-                    <li>Phone: <a href="tel:+919541445155" class="underline">+91-9541445155</a></li>
-                    <li>WhatsApp: <a href="https://wa.me/9541445155" class="underline">Chat with us</a></li>
+                    <li>Email: <a class="underline" href="mailto:traveldesk@traveltide.in">traveldesk@traveltide.in</a>
+                    </li>
+                    <li>Phone: <a class="underline" href="tel:+919541445155">+91-9541445155</a></li>
+                    <li>WhatsApp: <a class="underline" href="https://wa.me/9541445155">Chat with us</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
-
 
 
 <footer class="bg-gray-950 text-gray-300 flex items-center justify-center py-8" id="immigrate-section">
@@ -302,8 +315,6 @@
         <p class="text-xs text-gray-500">Registration Number: JKEA00002363</p>
     </div>
 </footer>
-
-
 
 
 <script>
@@ -325,17 +336,13 @@
             next() {
                 if (this.currentIndex < this.images.length) {
                     this.currentIndex = this.currentIndex + 1;
-                } else if (this.currentIndex <= this.images.length){
+                } else if (this.currentIndex <= this.images.length) {
                     this.currentIndex = this.images.length - this.currentIndex + 1
                 }
             },
         }))
     })
 </script>
-
-
-
-
 
 
 </body>
