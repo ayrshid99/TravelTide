@@ -15,15 +15,15 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body style="padding-left: 30px;padding-right: 30px;">
-<header class="bg-gray-50 py-4 px-6">
+<header class="bg-gray-50 py-4 px-6 hidden md:block">
     <div class="container mx-auto flex justify-between items-center">
         <div class="container flex">
-            <div class="-ml-5">
+            <div >
                 <img src="logo.png" alt="logo for travel tide" width="200px">
             </div>
             <div class="flex flex-col items-end justify-end ml-1 mb-2">
 
-                <p class="text-black text-lg font-semibold">Explore Kashmir with Us</p>
+                <p class="text-black text-lg font-semibold invisible md:visible">Explore Kashmir with Us</p>
             </div>
 
         </div>
@@ -40,7 +40,32 @@
         </div>
     </div>
 </header>
+<header class="bg-gray-50 py-4 px-6 visible md:hidden" >
+    <div class="container mx-auto flex  flex-col">
+        <div class="container flex  items-center justify-center flex-col">
+            <div >
+                <img src="logo.png" alt="logo for travel tide" >
+            </div>
+            <div class="flex flex-col items-end justify-end ml-1 mb-2">
 
+                <p class="text-black text-lg font-semibold ">Explore Kashmir with Us</p>
+            </div>
+
+        </div>
+        <div>
+        </div>
+        <div class="container flex flex-row  items-end justify-end space-x-4">
+
+            <div class="container flex flex-col items-center justify-center">
+                <p class="text-black">Email: traveldesk@traveltide.in</p>
+                <p class="text-black">Phone1: +91-9541445155</p>
+                <p class="text-black">Phone2:  +91-8899005557</p>
+
+
+            </div>
+        </div>
+    </div>
+</header>
 
 <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 <div class="relative w-full flex flex-shrink-0 overflow-hidden shadow-2xl">
